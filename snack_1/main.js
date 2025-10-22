@@ -24,9 +24,9 @@ const cars = [
 ]
 
 
-// const fuelCars = []
-// const dieselCars = []
-// const otherCars = []
+const fuelCars = []
+const dieselCars = []
+const otherCars = []
 
 
 
@@ -51,32 +51,52 @@ const cars = [
 
 //With arrays methods
 
-const fuelCars = cars.filter((thisCar) => {
-    if (thisCar.fuel === 'benzina') {
-        return true
+//with forEach
+cars.forEach((car)=>{
+    if(car.fuel === 'benzina'){
+        fuelCars.push(car)
+    } else if (car.fuel === 'diesel'){
+        dieselCars.push(car)
+    } else {
+        otherCars.push(car)
     }
-    return false
 })
-
-
-
-const dieselCars = cars.filter((thisCar) => {
-    if (thisCar.fuel === 'diesel') {
-        return true
-    }
-    return false
-})
-
-
-
-const otherCars = cars.filter((thisCar) => {
-    if (thisCar.fuel !== 'benzina' && thisCar.fuel !== 'diesel') {
-        return true
-    }
-    return false
-})
-
-
 console.log(fuelCars);
 console.log(dieselCars);
 console.log(otherCars);
+
+
+
+
+
+
+//with filter
+// const fuelCars = cars.filter((thisCar) => {
+//     if (thisCar.fuel === 'benzina') {
+//         return true
+//     }
+//     return false
+// })
+
+
+
+// const dieselCars = cars.filter((thisCar) => {
+//     if (thisCar.fuel === 'diesel') {
+//         return true
+//     }
+//     return false
+// })
+
+
+
+// const otherCars = cars.filter((thisCar) => {
+//     if (thisCar.fuel !== 'benzina' && thisCar.fuel !== 'diesel') {
+//         return true
+//     }
+//     return false
+// })
+
+
+// console.log(fuelCars);
+// console.log(dieselCars);
+// console.log(otherCars);
