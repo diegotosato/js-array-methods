@@ -57,7 +57,6 @@ const fuelCars = cars.filter((thisCar) => {
     }
     return false
 })
-console.log(fuelCars);
 
 
 
@@ -67,7 +66,6 @@ const dieselCars = cars.filter((thisCar) => {
     }
     return false
 })
-console.log(dieselCars);
 
 
 
@@ -77,4 +75,8 @@ const otherCars = cars.filter((thisCar) => {
     }
     return false
 })
+
+
+console.log(fuelCars);
+console.log(dieselCars);
 console.log(otherCars);
