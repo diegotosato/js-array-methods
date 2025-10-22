@@ -22,3 +22,27 @@ const cars = [
   { brand: 'Mercedes', model: 'Classe C', fuel: 'elettrico' },
   { brand: 'Peugeot', model: '208', fuel: 'metano' }
 ]
+
+
+const fuelCars = []
+const dieselCars = []
+const otherCars = []
+
+
+
+
+// With For loop
+for (let i = 0; i < cars.length; i++) {
+    const thisCar = cars[i];
+    if(thisCar.fuel === 'benzina'){
+        fuelCars.push(thisCar)
+    } else if (thisCar.fuel === 'diesel'){
+        dieselCars.push(thisCar)
+    } else {
+        otherCars.push(thisCar)
+    }
+}
+
+console.log(fuelCars);
+console.log(dieselCars);
+console.log(otherCars);
